@@ -3,6 +3,11 @@
 Node v14.17.0
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
+executar a aplicação a partir do npm start
+ - foi criado o arquivo proxy.conf.json com mapeamento da porta
+ - foi alterado o arquivo package.json para considerar este arquivo na execução no ng serve: de "start": "ng serve" para "start": "ng serve --proxy-config proxy.conf.json".
+ - foi alterado a porta no arquivo environments.ts para usar a porta 4200 e evitar problemas de CORS
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
