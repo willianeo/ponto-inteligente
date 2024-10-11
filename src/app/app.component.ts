@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ponto-inteligente';
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+  }
+
+  sair() {
+    delete localStorage['token'];
+    this.router.navigate(['/']);
+  }
+
+  autenticado(): boolean {
+    return localStorage['token'];
+  }
 }
